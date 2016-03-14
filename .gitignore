@@ -1,0 +1,7 @@
+/target/
+*.sw[op]
+
+# Eclipse files
+.classpath
+.project
+.settings

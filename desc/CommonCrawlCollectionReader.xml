@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collectionReaderDescription  xmlns="http://uima.apache.org/resourceSpecifier">
+    <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+    <implementationName>org.apache.uima.components.cccr.CommonCrawlCollectionReader</implementationName>
+    <processingResourceMetaData>
+        <name>Common Crawl Collection Reader</name>
+        <version>1.0</version>
+        <configurationParameters>
+            <configurationParameter>
+                <name>SomeParameter</name>
+                <description>Some description</description>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+            </configurationParameter>
+        </configurationParameters>
+		<configurationParameterSettings>
+            <!-- Default values? -->
+		    <nameValuePair>
+		        <name>SomeParameter</name>
+		        <value>
+		            <string>someString</string>
+		        </value>
+		    </nameValuePair>
+		</configurationParameterSettings>
+
+        <!-- Type System of CASes returned by this Collection Reader -->
+        <typeSystemDescription>
+          <imports>
+            <import name="org.apache.uima.examples.SourceDocumentInformation"/>
+          </imports>
+        </typeSystemDescription>
+
+        <capabilities>
+          	<capability>
+          		<inputs/>
+          		<outputs>
+          			<type allAnnotatorFeatures="true">org.apache.uima.examples.SourceDocumentInformation</type>
+          		</outputs>
+          	</capability>
+        </capabilities>
+
+		<operationalProperties>
+			<modifiesCas>true</modifiesCas>
+			<multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+			<outputsNewCASes>true</outputsNewCASes>
+		</operationalProperties>		
+    </processingResourceMetaData>
+</collectionReaderDescription>
